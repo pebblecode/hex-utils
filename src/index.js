@@ -26,6 +26,9 @@ function leftPadWithSpace(hexValue, charlength, spaceInterval = 2) {
 }
 
 export function intToPrettyHex(int, charlength = 8) {
+  if (int === null || isNaN(int)) {
+    throw new Error('non integer value provided to intToPrettyHex');
+  }
 
   const hexValue = int.toString(16);
 

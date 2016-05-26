@@ -47,3 +47,17 @@ describe('hex formatted as XX XX XX XX', () => {
     expect(formatted).to.equal('04 A8 17 C8 03');
   });
 });
+
+describe('invalid input should throw an error on non integer values', () => {
+  it('undefined', () => {
+    expect(intToPrettyHex).to.throw('non integer value provided to intToPrettyHex');
+  });
+
+  it('null', () => {
+    expect(() => intToPrettyHex(null)).to.throw('non integer value provided to intToPrettyHex');
+  });
+
+  it('randomstring asda 123 sdf!@£ x', () => {
+    expect(() => intToPrettyHex('randomstring asda 123 sdf!@£ x')).to.throw('non integer value provided to intToPrettyHex');
+  });
+});
