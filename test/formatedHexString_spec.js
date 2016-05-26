@@ -46,6 +46,11 @@ describe('hex formatted as XX XX XX XX', () => {
     const formatted = intToPrettyHex(20000000003);
     expect(formatted).to.equal('04 A8 17 C8 03');
   });
+
+  it('should format 2', () => {
+    const formatted = intToPrettyHex(20);
+    expect(formatted).to.equal('00 00 00 14');
+  });
 });
 
 describe('invalid input should throw an error on non integer values', () => {
