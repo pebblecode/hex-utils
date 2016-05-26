@@ -1,7 +1,7 @@
 {
   "name": "hex-utils",
-  "version": "1.0.0-rc6",
-  "description": "a thin wrapper around the fetch api to provide you with a subscribe function to intercept 401 status responses, uses @export-mike/efetch for caching etags",
+  "version": "1.0.0",
+  "description": "hex utils convert int to hex with nice formatting",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha test --compilers js:babel-core/register",
