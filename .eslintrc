@@ -1,0 +1,10 @@
+{
+  "extends": "rackt",
+  "rules": {
+    semi: ["error", "always"]
+  },
+  "globals": {
+    "describe": true,
+    "it": true
+  }
+}
